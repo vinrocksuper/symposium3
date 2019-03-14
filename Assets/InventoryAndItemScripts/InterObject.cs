@@ -7,10 +7,10 @@ public class InterObject : MonoBehaviour
     public bool inventory; //if true can be stored in inventory
     public bool farmable; //true if farmable
     public bool bin;
-    public Inventory inv;
+    public Inventory inv = null;
     public DigitalClock dc = null;
     public GameManager gm = null;
-    public GameObject UI;
+    public GameObject UI = null;
     public void DoInter()
     {
         //Make item disappear
