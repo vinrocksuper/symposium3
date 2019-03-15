@@ -939,11 +939,11 @@ GameObject:
   m_Component:
   - component: {fileID: 272634681}
   - component: {fileID: 272634680}
-  - component: {fileID: 272634679}
   - component: {fileID: 272634678}
+  - component: {fileID: 272634679}
   m_Layer: 0
   m_Name: Bin
-  m_TagString: interObject
+  m_TagString: interUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -983,18 +983,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 272634677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f620121d630cd2e46b12d11dbddb9320, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fe36557e4ee0034ab1bc8fe47f3ebca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: 0
-  farmable: 0
   bin: 1
-  talks: 0
-  inv: {fileID: 0}
   dc: {fileID: 0}
   gm: {fileID: 0}
   UI: {fileID: 211283484}
-  message: 
 --- !u!212 &272634680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1349,12 +1344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: 0
   farmable: 0
-  bin: 0
   talks: 1
-  inv: {fileID: 0}
-  dc: {fileID: 0}
-  gm: {fileID: 0}
-  UI: {fileID: 0}
   message: Howdy Partner! Pick up them seeds and start plantin!
 --- !u!61 &433125011
 BoxCollider2D:
@@ -1601,12 +1591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: 0
   farmable: 0
-  bin: 0
   talks: 0
-  inv: {fileID: 0}
-  dc: {fileID: 0}
-  gm: {fileID: 0}
-  UI: {fileID: 0}
   message: 
 --- !u!1 &519420028
 GameObject:
@@ -1967,12 +1952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: 1
   farmable: 0
-  bin: 0
   talks: 0
-  inv: {fileID: 0}
-  dc: {fileID: 0}
-  gm: {fileID: 0}
-  UI: {fileID: 0}
   message: 
 --- !u!58 &605774749
 CircleCollider2D:
@@ -2210,11 +2190,11 @@ GameObject:
   m_Component:
   - component: {fileID: 663035491}
   - component: {fileID: 663035490}
-  - component: {fileID: 663035493}
   - component: {fileID: 663035492}
+  - component: {fileID: 663035493}
   m_Layer: 0
   m_Name: house
-  m_TagString: interObject
+  m_TagString: interUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2294,7 +2274,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.021499753, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2305,7 +2285,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.87, y: 1.08}
+  m_Size: {x: 0.9129995, y: 1.08}
   m_EdgeRadius: 0
 --- !u!114 &663035493
 MonoBehaviour:
@@ -2316,18 +2296,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 663035489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f620121d630cd2e46b12d11dbddb9320, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fe36557e4ee0034ab1bc8fe47f3ebca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: 0
-  farmable: 0
   bin: 0
-  talks: 0
-  inv: {fileID: 0}
   dc: {fileID: 1436573064}
   gm: {fileID: 113272082}
-  UI: {fileID: 0}
-  message: 
+  UI: {fileID: 1821292406}
 --- !u!1 &702805639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2689,12 +2664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: 1
   farmable: 0
-  bin: 0
   talks: 0
-  inv: {fileID: 0}
-  dc: {fileID: 0}
-  gm: {fileID: 0}
-  UI: {fileID: 0}
   message: 
 --- !u!58 &717285596
 CircleCollider2D:
@@ -3601,6 +3571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curInterObj: {fileID: 0}
   curInterObjScript: {fileID: 0}
+  curInterUIScript: {fileID: 0}
   inventory: {fileID: 950665107}
 --- !u!114 &950665107
 MonoBehaviour:
@@ -4138,12 +4109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: 1
   farmable: 0
-  bin: 0
   talks: 0
-  inv: {fileID: 0}
-  dc: {fileID: 0}
-  gm: {fileID: 0}
-  UI: {fileID: 0}
   message: 
 --- !u!58 &1388618564
 CircleCollider2D:
@@ -5792,12 +5758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: 1
   farmable: 0
-  bin: 0
   talks: 0
-  inv: {fileID: 0}
-  dc: {fileID: 0}
-  gm: {fileID: 0}
-  UI: {fileID: 0}
   message: 
 --- !u!58 &1692269602
 CircleCollider2D:
