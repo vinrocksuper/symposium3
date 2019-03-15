@@ -989,10 +989,12 @@ MonoBehaviour:
   inventory: 0
   farmable: 0
   bin: 1
+  talks: 0
   inv: {fileID: 0}
   dc: {fileID: 0}
   gm: {fileID: 0}
   UI: {fileID: 211283484}
+  message: 
 --- !u!212 &272634680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1314,6 +1316,134 @@ RectTransform:
   m_AnchoredPosition: {x: 210, y: -30}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &433125009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433125013}
+  - component: {fileID: 433125012}
+  - component: {fileID: 433125011}
+  - component: {fileID: 433125010}
+  m_Layer: 0
+  m_Name: Helper
+  m_TagString: interObject
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &433125010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433125009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f620121d630cd2e46b12d11dbddb9320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: 0
+  farmable: 0
+  bin: 0
+  talks: 1
+  inv: {fileID: 0}
+  dc: {fileID: 0}
+  gm: {fileID: 0}
+  UI: {fileID: 0}
+  message: Howdy Partner! Pick up them seeds and start plantin!
+--- !u!61 &433125011
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433125009}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.021905601, y: 0.38936627}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 2.56}
+    newSize: {x: 1.28, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.73082924, y: 1.2869525}
+  m_EdgeRadius: 0
+--- !u!212 &433125012
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433125009}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 1ab6e0d5486901a4f82d3ad515d6e86f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.28, y: 2.56}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &433125013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433125009}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.285185, y: 4.7, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &468832148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,10 +1602,12 @@ MonoBehaviour:
   inventory: 0
   farmable: 0
   bin: 0
+  talks: 0
   inv: {fileID: 0}
   dc: {fileID: 0}
   gm: {fileID: 0}
   UI: {fileID: 0}
+  message: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,10 +1968,12 @@ MonoBehaviour:
   inventory: 1
   farmable: 0
   bin: 0
+  talks: 0
   inv: {fileID: 0}
   dc: {fileID: 0}
   gm: {fileID: 0}
   UI: {fileID: 0}
+  message: 
 --- !u!58 &605774749
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2188,10 +2322,12 @@ MonoBehaviour:
   inventory: 0
   farmable: 0
   bin: 0
+  talks: 0
   inv: {fileID: 0}
   dc: {fileID: 1436573064}
   gm: {fileID: 113272082}
   UI: {fileID: 0}
+  message: 
 --- !u!1 &702805639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,10 +2690,12 @@ MonoBehaviour:
   inventory: 1
   farmable: 0
   bin: 0
+  talks: 0
   inv: {fileID: 0}
   dc: {fileID: 0}
   gm: {fileID: 0}
   UI: {fileID: 0}
+  message: 
 --- !u!58 &717285596
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4001,10 +4139,12 @@ MonoBehaviour:
   inventory: 1
   farmable: 0
   bin: 0
+  talks: 0
   inv: {fileID: 0}
   dc: {fileID: 0}
   gm: {fileID: 0}
   UI: {fileID: 0}
+  message: 
 --- !u!58 &1388618564
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5653,10 +5793,12 @@ MonoBehaviour:
   inventory: 1
   farmable: 0
   bin: 0
+  talks: 0
   inv: {fileID: 0}
   dc: {fileID: 0}
   gm: {fileID: 0}
   UI: {fileID: 0}
+  message: 
 --- !u!58 &1692269602
 CircleCollider2D:
   m_ObjectHideFlags: 0

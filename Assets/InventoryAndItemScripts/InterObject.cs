@@ -7,10 +7,13 @@ public class InterObject : MonoBehaviour
     public bool inventory; //if true can be stored in inventory
     public bool farmable; //true if farmable
     public bool bin;
+    public bool talks;
     public Inventory inv = null;
     public DigitalClock dc = null;
     public GameManager gm = null;
     public GameObject UI = null;
+    public string message;
+
     public void DoInter()
     {
         //Make item disappear
@@ -33,6 +36,12 @@ public class InterObject : MonoBehaviour
 
         }
     }
+
+    public void Talk()
+    {
+        Debug.Log(message);
+    }
+
     public void Update()
     {
         if(Input.GetButtonDown("Cancel"))

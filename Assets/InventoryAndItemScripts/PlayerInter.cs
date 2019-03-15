@@ -23,6 +23,10 @@ public class PlayerInter : MonoBehaviour
             {
                 curInterObjScript.DoInter();
             }
+            if(curInterObjScript.talks)
+            {
+                curInterObjScript.Talk();
+            }
         }
     }
 
