@@ -2631,6 +2631,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15fc7fc4c8898ad469c5e77351990e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemList:
+  - itemName: test
+    icon: {fileID: 21300000, guid: dab2d000877b925409bc9a683d0de7e9, type: 3}
+    price: 100
+  contentPanel: {fileID: 714104236}
+  otherShop: {fileID: 0}
+  myGoldDisplay: {fileID: 1889377757}
+  buttonObjectPool: {fileID: 573130031}
+  gold: 1000
 --- !u!1 &717285594
 GameObject:
   m_ObjectHideFlags: 0
@@ -6751,7 +6760,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ____________G
+  m_Text: 1000G
 --- !u!222 &1889377758
 CanvasRenderer:
   m_ObjectHideFlags: 0
