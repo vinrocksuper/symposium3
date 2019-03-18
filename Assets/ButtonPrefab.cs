@@ -9,15 +9,28 @@ public class ButtonPrefab : MonoBehaviour
     public Text name;
     public Text price;
     public Image icon;
+
+    private Item item;
+    private ShopList ShopList;
     // Start is called before the first frame update
     void Start()
     {
-     
+        b.onClick.AddListener(handleClick);
 
     }
 
-    void Setup()
+    public void Setup(Item currentItem, ShopList sl)
     {
+        item = currentItem;
+        name.text = item.itemName;
+        price.text = item.price.ToString();
+        icon.sprite = item.icon;
+
+        ShopList = sl;
+    }
+    public void handleClick()
+    {
+        ShopList.TryTransferItemToOtherShop(item);
 
     }
 }
