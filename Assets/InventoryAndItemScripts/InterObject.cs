@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class InterObject : MonoBehaviour
 {
     public bool inventory; //if true can be stored in inventory
     public bool farmable; //true if farmable
 
     public bool talks;
-
+    public Text t;
+    public Canvas textbox;
     public string message;
 
 
@@ -31,12 +32,16 @@ public class InterObject : MonoBehaviour
 
     public void Talk()
     {
-        Debug.Log(message);
+        
+        t.text = message;
+
     }
 
     public void Update()
     {
 
     }
+
+   
 
 }
