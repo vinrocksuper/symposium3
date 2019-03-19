@@ -955,6 +955,7 @@ GameObject:
   - component: {fileID: 272634680}
   - component: {fileID: 272634678}
   - component: {fileID: 272634679}
+  - component: {fileID: 272634682}
   m_Layer: 0
   m_Name: Bin
   m_TagString: interUI
@@ -1067,6 +1068,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &272634682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272634677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78043e5d6f8324543b9fac3177f0f42a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI: {fileID: 211283484}
+  UI2: {fileID: 180150485}
 --- !u!1 &353517859
 GameObject:
   m_ObjectHideFlags: 0
@@ -7427,6 +7442,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6116801561370669262, guid: fa8612c7e0d20004f8e9933f9471abc4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116801561370669262, guid: fa8612c7e0d20004f8e9933f9471abc4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116801561370669262, guid: fa8612c7e0d20004f8e9933f9471abc4,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6310191582200005354, guid: fa8612c7e0d20004f8e9933f9471abc4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7531,21 +7561,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116801561370669262, guid: fa8612c7e0d20004f8e9933f9471abc4,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116801561370669262, guid: fa8612c7e0d20004f8e9933f9471abc4,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116801561370669262, guid: fa8612c7e0d20004f8e9933f9471abc4,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1502181840957019113, guid: fa8612c7e0d20004f8e9933f9471abc4,
         type: 3}
