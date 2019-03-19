@@ -27,10 +27,10 @@ public class ShopList : MonoBehaviour
         RefreshDisplay();
     }
 
-    void RefreshDisplay()
+    public void RefreshDisplay()
     {
         myGoldDisplay.text = "Gold: " + gold.ToString();
-        RemoveButtons();
+      //  RemoveButtons();
         AddButtons();
     }
 

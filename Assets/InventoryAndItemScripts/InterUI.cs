@@ -11,7 +11,7 @@ public class InterUI : MonoBehaviour
     public DigitalClock dc = null;
     public GameManager gm = null;
     public GameObject UI = null;
-
+    public GameObject UI2 = null;
 
     public void DoInter()
     {
@@ -23,7 +23,7 @@ public class InterUI : MonoBehaviour
         else if (bin)
         {
             UI.SetActive(true);
-
+            UI2.SetActive(true);
         }
     }
 
@@ -35,6 +35,7 @@ public class InterUI : MonoBehaviour
             if (UI.activeSelf)
             {
                 UI.SetActive(false);
+                UI2.SetActive(false);
             }
         }
     }
