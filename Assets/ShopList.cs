@@ -58,6 +58,10 @@ public class ShopList : MonoBehaviour
 
     public void TryTransferItemToOtherShop(Item item)
     {
+        if(otherShop == null)
+        {
+            return;
+        }
         if (otherShop.gold >= item.price)
         {
             gold += item.price;
