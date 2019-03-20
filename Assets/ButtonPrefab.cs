@@ -12,6 +12,7 @@ public class ButtonPrefab : MonoBehaviour
 
     private Item item;
     private ShopList ShopList;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class ButtonPrefab : MonoBehaviour
 
         ShopList = sl;
     }
+    
     public void handleClick()
     {
         ShopList.TryTransferItemToOtherShop(item);

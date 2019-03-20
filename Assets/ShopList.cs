@@ -17,7 +17,7 @@ public class ShopList : MonoBehaviour
     public ShopList otherShop;
     public Text myGoldDisplay;
     public ObjectPool buttonObjectPool;
-
+    public bool updatepls;
     public float gold = 20f;
 
 
@@ -30,7 +30,8 @@ public class ShopList : MonoBehaviour
     public void RefreshDisplay()
     {
         myGoldDisplay.text = "Gold: " + gold.ToString();
-      //  RemoveButtons();
+        Debug.Log(contentPanel.childCount);
+        RemoveButtons();
         AddButtons();
     }
 
@@ -72,10 +73,8 @@ public class ShopList : MonoBehaviour
 
             RefreshDisplay();
             otherShop.RefreshDisplay();
-            Debug.Log("enough gold");
-
         }
-        Debug.Log("attempted");
+        
     }
 
     void AddItem(Item itemToAdd, ShopList shopList)
