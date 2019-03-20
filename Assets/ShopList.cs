@@ -9,6 +9,7 @@ public class Item
     public string itemName;
     public Sprite icon;
     public float price = 1;
+ 
 }
 public class ShopList : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class ShopList : MonoBehaviour
     public ShopList otherShop;
     public Text myGoldDisplay;
     public ObjectPool buttonObjectPool;
-
+    public Inventory inv;
     public float gold = 20f;
 
 
@@ -91,6 +92,15 @@ public class ShopList : MonoBehaviour
                 shopList.itemList.RemoveAt(i);
             }
         }
+    }
+    private Item convert(item it)
+    {
+        Item a = new Item();
+        a.icon = it.sprite;
+        a.price = it.price;
+        a.itemName = it.name;
+        return a;
+
     }
 }
 
