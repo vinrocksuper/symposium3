@@ -17,7 +17,7 @@ public class ShopList : MonoBehaviour
     public ShopList otherShop;
     public Text myGoldDisplay;
     public ObjectPool buttonObjectPool;
-    public bool updatepls;
+
     public float gold = 20f;
 
 
