@@ -30,7 +30,7 @@ public class InterUI : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel") && UI2)
         {
             if (UI.activeSelf)
             {

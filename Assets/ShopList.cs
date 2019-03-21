@@ -3,14 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-[System.Serializable]
-public class Item
-{
-    public string itemName;
-    public Sprite icon;
-    public float price = 1;
- 
-}
+
 public class ShopList : MonoBehaviour
 {
     public List<Item> itemList;
@@ -18,8 +11,8 @@ public class ShopList : MonoBehaviour
     public ShopList otherShop;
     public Text myGoldDisplay;
     public ObjectPool buttonObjectPool;
-    public float gold = 20f;
-
+    public int gold = 0;
+    public GameManager gm;
 
     // Use this for initialization
     void Start()
@@ -29,10 +22,11 @@ public class ShopList : MonoBehaviour
 
     public void RefreshDisplay()
     {
-        myGoldDisplay.text = "Gold: " + gold.ToString();
-        Debug.Log(contentPanel.childCount);
+        
         RemoveButtons();
         AddButtons();
+        UpdateValue();
+        myGoldDisplay.text = gold.ToString();
     }
 
     private void RemoveButtons()
@@ -59,21 +53,13 @@ public class ShopList : MonoBehaviour
 
     public void TryTransferItemToOtherShop(Item item)
     {
-        if(otherShop == null)
-        {
-            return;
-        }
-        if (otherShop.gold >= item.price)
-        {
-            gold += item.price;
-            otherShop.gold -= item.price;
 
             AddItem(item, otherShop);
             RemoveItem(item, this);
-
+            
             RefreshDisplay();
             otherShop.RefreshDisplay();
-        }
+        
         
     }
 
@@ -91,6 +77,26 @@ public class ShopList : MonoBehaviour
                 shopList.itemList.RemoveAt(i);
             }
         }
+    }
+
+    private void UpdateValue()
+    {
+        int valueAdd = 0;
+        Text[] textfields = GetComponentsInChildren<Text>();
+        for(int i=1;i<textfields.Length;i+=2)
+        {
+            int a = int.Parse(textfields[i].text);
+            valueAdd += a;
+        }
+        gold = valueAdd;
+    }
+    public int dayClear()
+    {
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            RemoveItem(itemList[i], this);
+        }
+        return gold;
     }
 }
 
