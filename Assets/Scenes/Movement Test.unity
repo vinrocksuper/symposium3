@@ -388,6 +388,7 @@ MonoBehaviour:
   OptionsMenu: {fileID: 113272084}
   InventoryBar: {fileID: 937188606}
   ShippingBin: {fileID: 211283484}
+  bin: {fileID: 714104239}
 --- !u!4 &113272083
 Transform:
   m_ObjectHideFlags: 0
@@ -1452,8 +1453,8 @@ MonoBehaviour:
   otherShop: {fileID: 714104239}
   myGoldDisplay: {fileID: 1895990813}
   buttonObjectPool: {fileID: 573130031}
-  inv: {fileID: 0}
-  gold: 20
+  gold: 0
+  gm: {fileID: 0}
 --- !u!114 &484221920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2472,15 +2473,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemList:
-  - itemName: test
+  - itemName: Tomato Seed
     icon: {fileID: 21300000, guid: dab2d000877b925409bc9a683d0de7e9, type: 3}
-    price: 1
+    price: 10
   contentPanel: {fileID: 714104236}
   otherShop: {fileID: 484221919}
   myGoldDisplay: {fileID: 1889377757}
   buttonObjectPool: {fileID: 573130031}
-  inv: {fileID: 0}
-  gold: 20
+  gold: 0
+  gm: {fileID: 0}
 --- !u!1 &717285594
 GameObject:
   m_ObjectHideFlags: 0
@@ -6926,7 +6927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1895990813
 MonoBehaviour:
   m_ObjectHideFlags: 0

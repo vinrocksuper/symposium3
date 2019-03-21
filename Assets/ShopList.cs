@@ -94,6 +94,7 @@ public class ShopList : MonoBehaviour
     {
         for (int i = 0; i < itemList.Count; i++)
         {
+            
             RemoveItem(itemList[i], this);
         }
         return gold;
