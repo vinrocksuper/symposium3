@@ -9,8 +9,9 @@ public class InterObject : MonoBehaviour
 
     public bool talks;
     public Text t;
-    public Canvas textbox;
+    public GameObject textbox;
     public string message;
+
 
 
     public void DoInter()
@@ -34,7 +35,8 @@ public class InterObject : MonoBehaviour
     {
         
         t.text = message;
-
+        textbox.SetActive(true);
+        
     }
 
     public void Update()
