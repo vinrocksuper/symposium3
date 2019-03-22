@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 272634678}
   - component: {fileID: 272634679}
   - component: {fileID: 272634682}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bin
   m_TagString: interUI
   m_Icon: {fileID: 0}
@@ -1373,7 +1373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.285185, y: 4.7}
+  m_AnchoredPosition: {x: 10.2, y: -3.08}
   m_SizeDelta: {x: 1.28, y: 2.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &468832148
@@ -2084,7 +2084,7 @@ GameObject:
   - component: {fileID: 663035490}
   - component: {fileID: 663035492}
   - component: {fileID: 663035493}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: house
   m_TagString: interUI
   m_Icon: {fileID: 0}
@@ -3309,7 +3309,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 279
   m_GroundCheck: {fileID: 1352745342}
   m_CeilingCheck: {fileID: 901226476}
   m_CrouchDisableCollider: {fileID: 950665101}
