@@ -29,7 +29,7 @@ public class ShopList : MonoBehaviour
         myGoldDisplay.text = gold.ToString();
     }
 
-    private void RemoveButtons()
+    public void RemoveButtons()
     {
         while (contentPanel.childCount > 0)
         {
@@ -38,7 +38,7 @@ public class ShopList : MonoBehaviour
         }
     }
 
-    private void AddButtons()
+    public void AddButtons()
     {
         for (int i = 0; i < itemList.Count; i++)
         {
@@ -63,12 +63,12 @@ public class ShopList : MonoBehaviour
         
     }
 
-    void AddItem(Item itemToAdd, ShopList shopList)
+    public void AddItem(Item itemToAdd, ShopList shopList)
     {
         shopList.itemList.Add(itemToAdd);
     }
 
-    private void RemoveItem(Item itemToRemove, ShopList shopList)
+    public void RemoveItem(Item itemToRemove, ShopList shopList)
     {
         for (int i = shopList.itemList.Count - 1; i >= 0; i--)
         {
