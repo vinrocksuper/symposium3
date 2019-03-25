@@ -79,7 +79,7 @@ public class ShopList : MonoBehaviour
         }
     }
 
-    private void UpdateValue()
+    public void UpdateValue()
     {
         int valueAdd = 0;
         Text[] textfields = GetComponentsInChildren<Text>();
@@ -90,14 +90,19 @@ public class ShopList : MonoBehaviour
         }
         gold = valueAdd;
     }
-    public int dayClear()
+    public void dayClear()
     {
-        for (int i = 0; i < itemList.Count; i++)
-        {
-            
-            RemoveItem(itemList[i], this);
-        }
+        RemoveButtons();
+        
+    }
+    public int addMoney()
+    {
+
         return gold;
+    }
+    public void newDay()
+    {
+        myGoldDisplay.text = gold.ToString();
     }
 }
 

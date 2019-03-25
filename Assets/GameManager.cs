@@ -33,20 +33,18 @@ public class GameManager : MonoBehaviour
         }
         if (dc.hours == 12 && dc.am && dc.minutes == 0)
         {
-            Debug.Log("Method called");
+            
             if (dc.day< 10)
             {
                 date.text = dc.season + "/0" + dc.day;
                 
-                money += bin.dayClear();
-                bin.gold = 0;
+                
             }
             else
             {
                 date.text = dc.season + "/" + dc.day;
                 
-                money += bin.dayClear();
-                bin.gold = 0;
+                
             }
             
         }
@@ -60,10 +58,18 @@ public class GameManager : MonoBehaviour
         if (dc.day < 10)
         {
             date.text = dc.season + "/0" + dc.day;
+            bin.dayClear();
+            money += bin.addMoney();
+            bin.gold = 0;
+            bin.newDay();
         }
         else
         {
             date.text = dc.season + "/" + dc.day;
+            bin.dayClear();
+            money += bin.addMoney();
+            bin.gold = 0;
+            bin.newDay();
         }
     }
 }
