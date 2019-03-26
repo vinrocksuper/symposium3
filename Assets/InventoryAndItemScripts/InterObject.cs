@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class InterObject : MonoBehaviour
 {
-    public bool inventory; //if true can be stored in inventory
+    public Items inventory; //if true can be stored in inventory
     public bool farmable; //true if farmable
 
     public bool talks;
@@ -14,15 +14,17 @@ public class InterObject : MonoBehaviour
 
 
 
+
     public void DoInter()
     {
-
-
 
             //Make item disappear
             if (inventory)
             {
+                inventory.addButtons();
+
                 gameObject.SetActive(false);
+
             }
             else if (farmable)
             {

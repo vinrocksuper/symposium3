@@ -16,7 +16,11 @@ public class Items : MonoBehaviour
     public string name;
     public ShopList sl;
     private bool added =false;
+
+
     private Item a;
+
+
     // Update is called once per frame
     void Start()
     {
@@ -25,10 +29,10 @@ public class Items : MonoBehaviour
         a.icon = icon;
         a.price = price;
 
-        this.addButtons();
     }
-    void addButtons()
+    public void addButtons()
     {
+
         if (!added)
         {
             sl.AddItem(a, sl);

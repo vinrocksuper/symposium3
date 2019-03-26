@@ -13,7 +13,7 @@ public class ShopList : MonoBehaviour
     public ObjectPool buttonObjectPool;
     public int gold = 0;
     public GameManager gm;
-
+    
     // Use this for initialization
     void Start()
     {

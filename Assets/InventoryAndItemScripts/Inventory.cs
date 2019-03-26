@@ -29,4 +29,15 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+
+    public void removeItem(int pos)
+    {
+        inventory[pos] = null;
+    }
+
+    public void AddItem(Item i)
+    {
+        GameObject g = new GameObject();
+       
+    }
 }
