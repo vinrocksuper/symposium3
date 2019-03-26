@@ -11,7 +11,6 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(GameObject item)
     {
-        bool itemAdded = false;
 
         //find first open slot in inventory
         for(int i = 0;i < inventory.Length;i++)
@@ -22,7 +21,7 @@ public class Inventory : MonoBehaviour
                 //Update UI
                 InventoryImages[i].overrideSprite = item.GetComponent<SpriteRenderer>().sprite;
                 
-                itemAdded = true;
+
                 //Does something with the object
                 item.SendMessage("DoInter");
                 break;
@@ -33,11 +32,18 @@ public class Inventory : MonoBehaviour
     public void removeItem(int pos)
     {
         inventory[pos] = null;
+        InventoryImages[pos] = Resources.Load<Image>("Assets/Sprites/backgroundImage");
     }
-
-    public void AddItem(Item i)
+    public void AddItem(Item a)
     {
-        GameObject g = new GameObject();
-       
+        for(int i=0;i<inventory.Length;i++)
+        {
+            if(inventory[i] == null)
+            {
+                inventory[i] = new GameObject();
+                InventoryImages[i].overrideSprite = a.icon;
+                break;
+            }
+        }
     }
 }

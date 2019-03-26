@@ -9,8 +9,7 @@ public class Item
     public int price = 1;
 
 }
-public class Items : MonoBehaviour
-{
+public class Items : MonoBehaviour {
     public int price;
     public Sprite icon;
     public string name;

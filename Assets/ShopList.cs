@@ -13,7 +13,8 @@ public class ShopList : MonoBehaviour
     public ObjectPool buttonObjectPool;
     public int gold = 0;
     public GameManager gm;
-    
+    public Inventory inventory;
+    public bool inv;
     // Use this for initialization
     void Start()
     {
@@ -103,6 +104,26 @@ public class ShopList : MonoBehaviour
     public void newDay()
     {
         myGoldDisplay.text = gold.ToString();
+    }
+    public void removeFromInventoryBar()
+    {
+        if(inv)
+        {
+            for(int i=0;i<this.itemList.Count;i++)
+            {
+                inventory.removeItem(i);
+            }
+        }
+    }
+    public void addToInventoryBar()
+    {
+        if(inv)
+        {
+            for(int i=0;i<this.itemList.Count;i++)
+            {
+                inventory.AddItem(itemList[i]);
+            }
+        }
     }
 }
 
