@@ -15,15 +15,25 @@ public class Items : MonoBehaviour
     public Sprite icon;
     public string name;
     public ShopList sl;
+    private bool added =false;
+    private Item a;
     // Update is called once per frame
     void Start()
     {
-        Item a = new Item();
+        a = new Item();
         a.itemName = name;
         a.icon = icon;
         a.price = price;
-        sl.AddItem(a,sl);
-        
-    }
 
+        this.addButtons();
+    }
+    void addButtons()
+    {
+        if (!added)
+        {
+            sl.AddItem(a, sl);
+            sl.AddButtons();
+        }
+        added = true;
+    }
 }
