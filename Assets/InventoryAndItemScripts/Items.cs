@@ -29,7 +29,7 @@ public class Items : MonoBehaviour {
         a.price = price;
 
     }
-    public void addButtons()
+   public void addButtons()
     {
 
         if (!added)
@@ -39,4 +39,5 @@ public class Items : MonoBehaviour {
         }
         added = true;
     }
+
 }

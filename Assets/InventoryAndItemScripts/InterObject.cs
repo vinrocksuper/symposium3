@@ -21,11 +21,12 @@ public class InterObject : MonoBehaviour
             //Make item disappear
             if (inventory)
             {
-                inventory.addButtons();
+                
 
                 gameObject.SetActive(false);
+                 inventory.addButtons();
 
-            }
+        }
             else if (farmable)
             {
 

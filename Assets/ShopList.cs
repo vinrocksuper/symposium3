@@ -12,9 +12,9 @@ public class ShopList : MonoBehaviour
     public Text myGoldDisplay;
     public ObjectPool buttonObjectPool;
     public int gold = 0;
-    public GameManager gm;
-    public Inventory inventory;
-    public bool inv;
+   // public GameManager gm;
+  //  public Inventory inventory;
+ //   public bool inv;
     // Use this for initialization
     void Start()
     {
@@ -105,7 +105,7 @@ public class ShopList : MonoBehaviour
     {
         myGoldDisplay.text = gold.ToString();
     }
-    public void removeFromInventoryBar()
+   /** public void removeFromInventoryBar()
     {
         if(inv)
         {
@@ -125,5 +125,6 @@ public class ShopList : MonoBehaviour
             }
         }
     }
+    **/
 }
 
