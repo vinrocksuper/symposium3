@@ -23,7 +23,7 @@ public class farmland : MonoBehaviour
             if(planted)
             {
                 //water method here
-
+                watered = true;
                
             }
             else
@@ -43,29 +43,44 @@ public class farmland : MonoBehaviour
                 }
                 host = inventory.inventory.GetValue(firstPos) as GameObject;
                 sd = host.GetComponent<seed>();
-                Remove();
+                Remove(firstPos);
  
 
             }
         }
     }
-    private void Remove()
+    private void Remove(int a)
     {
         if (sd)
         {
             GameObject g = sd.gameObject;
             g.SetActive(false);
+            this.inventory.inventory[a] = null;
+            this.inventory.InventoryImages[a] = null;
         }
     }
 
-    private void die()
+    private void grow()
     {
-
+        GameObject crop = new GameObject("");
+        crop.AddComponent
     }
 
     public void onDayEnd()
     {
-
+        if(!watered && planted)
+        {
+            wither = true;
+        }
+        if(watered)
+        {
+            watered = false;
+            this.sd.daysToGrow--;
+            if(sd.daysToGrow==0)
+            {
+                grow();
+            }
+        }
     }
     public String[] convertArray()
     {
