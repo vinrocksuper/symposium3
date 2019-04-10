@@ -62,11 +62,14 @@ public class farmland : MonoBehaviour
 
     private void grow()
     {
+        /**
         GameObject crop = new GameObject("");
         crop.AddComponent<InterObject>();
         crop.AddComponent<CircleCollider2D>();
         crop.AddComponent<Items>();
-        
+        crop.gameObject.GetComponent<SpriteRenderer>();
+       **/
+        Instantiate(sd.crop);
     }
 
     public void onDayEnd()
