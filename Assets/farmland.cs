@@ -11,20 +11,21 @@ public class farmland : MonoBehaviour
 
     private GameObject host;
     private int firstPos;
-    private bool watered;
+    public bool watered;
     private bool wither;
-    private bool planted = false;
-
+    public bool planted = false;
+    public bool range = false;
     // Update is called once per frame
     void Update()
     {
+
         if(Input.GetButtonDown("Interact"))
         { 
             if(planted)
             {
                 //water method here
                 watered = true;
-               
+                Debug.Log("Plant watered");
             }
             else
             {
@@ -44,7 +45,7 @@ public class farmland : MonoBehaviour
                 host = inventory.inventory.GetValue(firstPos) as GameObject;
                 sd = host.GetComponent<seed>();
                 Remove(firstPos);
- 
+                planted = true;
 
             }
         }
@@ -99,5 +100,13 @@ public class farmland : MonoBehaviour
             }
         }
         return inventoryCopy;
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        range = true;
+    }
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        range = false;
     }
 }
