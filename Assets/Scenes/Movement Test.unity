@@ -169,6 +169,7 @@ MonoBehaviour:
   season: 1
   am: 0
   OptionsMenu: {fileID: 0}
+  f: {fileID: 502381170}
 --- !u!114 &17943782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1646,6 +1647,10 @@ MonoBehaviour:
   sd: {fileID: 0}
   inventory: {fileID: 950665107}
   inventoryCopy: []
+  land: {fileID: 502381165}
+  watered: 0
+  planted: 0
+  range: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5198,6 +5203,7 @@ MonoBehaviour:
   season: 1
   am: 0
   OptionsMenu: {fileID: 0}
+  f: {fileID: 502381170}
 --- !u!1 &1499853070
 GameObject:
   m_ObjectHideFlags: 0

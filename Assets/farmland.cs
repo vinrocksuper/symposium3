@@ -8,7 +8,7 @@ public class farmland : MonoBehaviour
     public seed sd = null;
     public Inventory inventory;
     public String[] inventoryCopy;
-
+    public GameObject land;
     private GameObject host;
     private int firstPos;
     public bool watered;
@@ -70,7 +70,7 @@ public class farmland : MonoBehaviour
         crop.AddComponent<Items>();
         crop.gameObject.GetComponent<SpriteRenderer>();
        **/
-        Instantiate(sd.crop);
+        Instantiate(sd.crop,transform.position + (transform.up), transform.rotation);
     }
 
     public void onDayEnd()
