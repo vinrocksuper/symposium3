@@ -17,7 +17,7 @@ public class DigitalClock : MonoBehaviour
     public bool am;
     private  System.Timers.Timer aTimer;
     public OptionsMenu OptionsMenu;
-
+    public farmland f;
     private void Start()
     {
         hours = 6;
@@ -34,6 +34,7 @@ public class DigitalClock : MonoBehaviour
         am = true;
         SetTimer();
         day++;
+        f.onDayEnd();
         if (day > 28)
         {
             day = 1;
@@ -73,6 +74,7 @@ public class DigitalClock : MonoBehaviour
                 {
                     am = true;
                     day++;
+                    f.onDayEnd();
                     if (day > 28)
                     {
                         day = 1;
