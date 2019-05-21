@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 3634301400cfa2b4a9cd5716f221b234
   - enabled: 1
-    path: Assets/Scenes/Movement Test.unity
+    path: Assets/Scenes/Farm.unity
     guid: de50b8ed7682c5147acf31c5e55833ee
   m_configObjects: {}
