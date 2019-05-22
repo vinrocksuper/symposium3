@@ -6,7 +6,6 @@ TagManager:
   tags:
   - interObject
   - interUI
-  - findme
   layers:
   - Default
   - TransparentFX

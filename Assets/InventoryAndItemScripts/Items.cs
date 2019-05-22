@@ -13,10 +13,10 @@ public class Items : MonoBehaviour {
     public int price;
     public Sprite icon;
     public string name;
-    public ShopList sl ;
+    public ShopList sl;
     private bool added =false;
 
-    private GameObject g = null;
+
     private Item a;
 
 
@@ -27,8 +27,7 @@ public class Items : MonoBehaviour {
         a.itemName = name;
         a.icon = icon;
         a.price = price;
-        g = GameObject.FindGameObjectWithTag("findme");
-        sl = g.GetComponent<ShopList>();
+
     }
    public void addButtons()
     {
@@ -40,5 +39,5 @@ public class Items : MonoBehaviour {
         }
         added = true;
     }
-    
+
 }
