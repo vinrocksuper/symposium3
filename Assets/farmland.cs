@@ -15,11 +15,13 @@ public class farmland : MonoBehaviour
     private bool wither;
     public bool planted = false;
     public bool range = false;
+    private bool fullyGrown = false;
+
     // Update is called once per frame
     void Update()
     {
 
-        if(Input.GetButtonDown("Interact"))
+        if(Input.GetButtonDown("Interact") && range)
         { 
             if(planted)
             {
@@ -27,12 +29,17 @@ public class farmland : MonoBehaviour
                 watered = true;
                 Debug.Log("Plant watered");
             }
+            else if(wither)
+            {
+                planted = false;
+                sd = null;
+                watered = false;
+            }
             else
             {
                 convertArray();
             
                 bool result = false;
-             //   bool result = inventor ; // Array.Exists(inventoryCopy, element => element.Contains("seed"));
              for(int i=0;i<inventoryCopy.Length;i++)
                 {
                     if (inventoryCopy[i] != null && inventoryCopy[i].Contains("Seed"))
@@ -62,14 +69,7 @@ public class farmland : MonoBehaviour
     }
 
     private void grow()
-    {
-        /**
-        GameObject crop = new GameObject("");
-        crop.AddComponent<InterObject>();
-        crop.AddComponent<CircleCollider2D>();
-        crop.AddComponent<Items>();
-        crop.gameObject.GetComponent<SpriteRenderer>();
-       **/
+    { 
         Instantiate(sd.crop,transform.position + (transform.up), transform.rotation);
     }
 
@@ -101,12 +101,12 @@ public class farmland : MonoBehaviour
         }
         return inventoryCopy;
     }
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         range = true;
     }
-    public void OnCollisionExit2D(Collision2D collision)
+    public void OnTriggerExit2D(Collider2D collision)
     {
-        range = false;
+        range = false;   
     }
 }
