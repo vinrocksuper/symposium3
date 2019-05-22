@@ -8,9 +8,10 @@ public class Close : MonoBehaviour
     public GameObject UI2;
     private void Start()
     {
+        /**
         UI2.GetComponent<CanvasGroup>().alpha = 0f;
         UI2.GetComponent<CanvasGroup>().blocksRaycasts = false;
-
+        **/
     }
     private void OnTriggerExit2D()
     {
