@@ -27,7 +27,7 @@ public class farmland : MonoBehaviour
             {
                 //water method here
                 watered = true;
-                Debug.Log("Plant watered");
+ 
             }
             else if(wither)
             {
