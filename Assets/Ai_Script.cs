@@ -19,8 +19,9 @@ public class Ai_Script : MonoBehaviour
     {
         if(c.hours == 7 && !c.am)
         {
-            
+            GetComponent<SpriteRenderer>().enabled = false;
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
