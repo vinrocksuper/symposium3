@@ -21,7 +21,7 @@ public class CharacterController2D : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
-
+    public CircleCollider2D ai;
 	[Header("Events")]
 	[Space]
 
@@ -33,10 +33,11 @@ public class CharacterController2D : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
-	private void Awake()
+    
+    private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
-
+        
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
 
