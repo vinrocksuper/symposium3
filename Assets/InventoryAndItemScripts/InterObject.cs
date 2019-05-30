@@ -17,21 +17,13 @@ public class InterObject : MonoBehaviour
 
     public void DoInter()
     {
-
-            //Make item disappear
-            if (inventory)
+        //Make item disappear
+        if (inventory)
             {
-                
+            gameObject.SetActive(false);
+            inventory.addButtons();
 
-                gameObject.SetActive(false);
-                 inventory.addButtons();
-
-        }
-            else if (farmable)
-            {
-
-            }
-        
+        }  
     }
 
     public void Talk()
