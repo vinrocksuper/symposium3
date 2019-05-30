@@ -28,11 +28,18 @@ public class Ai_Script : MonoBehaviour
                 }
                 
             }
-            //GetComponent<SpriteRenderer>().enabled = false;
+            if (GetComponent<SpriteRenderer>().enabled && !(transform.position.x < 23.13108))
+            {
+                GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
         else
         {
-            if(transform.position.x > 14.53)
+            if (!GetComponent<SpriteRenderer>().enabled)
+            {
+                GetComponent<SpriteRenderer>().enabled = true;
+            }
+            if (transform.position.x > 14.53)
             {
                 transform.position += new Vector3(-runSpeed * Time.deltaTime, 0, 0);
                 if (!m_FacingRight)
@@ -41,7 +48,7 @@ public class Ai_Script : MonoBehaviour
                 }
 
             }
-           // GetComponent<SpriteRenderer>().enabled = true;
+            
         }
     }
 
