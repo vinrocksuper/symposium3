@@ -1424,6 +1424,7 @@ MonoBehaviour:
   c: {fileID: 1436573064}
   runSpeed: 3
   friendship: 0
+  friendshipelevel: 0
   hasBeenTalkedTo: 0
   trigger: {fileID: 433125011}
   circle: {fileID: 433125015}
@@ -1498,7 +1499,7 @@ GameObject:
   - component: {fileID: 484221919}
   m_Layer: 5
   m_Name: Content
-  m_TagString: Untagged
+  m_TagString: findme
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
