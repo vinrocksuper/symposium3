@@ -16,20 +16,20 @@ public class farmland : MonoBehaviour
     public bool planted = false;
     public bool range = false;
     private bool fullyGrown = false;
-    public ObjectPool cropPool;
+
     // Update is called once per frame
     void Update()
     {
 
-        if(Input.GetButtonDown("Interact") && range)
-        { 
-            if(planted)
+        if (Input.GetButtonDown("Interact") && range)
+        {
+            if (planted)
             {
                 //water method here
                 watered = true;
- 
+
             }
-            else if(wither)
+            else if (wither)
             {
                 planted = false;
                 sd = null;
@@ -38,16 +38,16 @@ public class farmland : MonoBehaviour
             else
             {
                 convertArray();
-            
+
                 bool result = false;
-            for(int i=0;i<inventoryCopy.Length;i++)
+                for (int i = 0; i < inventoryCopy.Length; i++)
                 {
                     if (inventoryCopy[i] != null && inventoryCopy[i].Contains("Seed"))
                     {
                         firstPos = i;
                         break;
                     }
-                    
+
                 }
                 host = inventory.inventory.GetValue(firstPos) as GameObject;
                 sd = host.GetComponent<seed>();
@@ -69,21 +69,21 @@ public class farmland : MonoBehaviour
     }
 
     private void grow()
-    { 
-        Instantiate(sd.crop,transform.position + (transform.up), transform.rotation);
+    {
+        Instantiate(sd.crop, transform.position + (transform.up), transform.rotation);
     }
 
     public void onDayEnd()
     {
-        if(!watered && planted)
+        if (!watered && planted)
         {
             wither = true;
         }
-        if(watered)
+        if (watered)
         {
             watered = false;
             this.sd.daysToGrow--;
-            if(sd.daysToGrow==0)
+            if (sd.daysToGrow == 0)
             {
                 grow();
             }
@@ -92,9 +92,9 @@ public class farmland : MonoBehaviour
     public String[] convertArray()
     {
         inventoryCopy = new string[inventory.inventory.Length];
-        for (int i=0;i<inventory.inventory.Length;i++)
+        for (int i = 0; i < inventory.inventory.Length; i++)
         {
-            if(inventory.inventory[i]!=null)
+            if (inventory.inventory[i] != null)
             {
                 inventoryCopy[i] = inventory.inventory[i].ToString();
             }
@@ -107,10 +107,6 @@ public class farmland : MonoBehaviour
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-        range = false;   
-    }
-    private void Start()
-    {
-        cropPool = GameObject.FindGameObjectWithTag("cherryPool").GetComponent<ObjectPool>();
+        range = false;
     }
 }

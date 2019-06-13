@@ -31,7 +31,6 @@ public class Items : MonoBehaviour {
     }
     private void Awake()
     {
-        Debug.Log("woke");
         a = new Item();
         a.itemName = name;
         a.icon = icon;
