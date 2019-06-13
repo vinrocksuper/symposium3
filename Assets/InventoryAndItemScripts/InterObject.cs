@@ -20,7 +20,7 @@ public class InterObject : MonoBehaviour
         //Make item disappear
         if (inventory)
             {
-            DestroyImmediate(this);
+            this.gameObject.SetActive(false);
             inventory.addButtons();
 
         }  
