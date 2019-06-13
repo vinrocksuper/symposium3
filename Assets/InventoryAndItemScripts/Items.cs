@@ -13,23 +13,12 @@ public class Items : MonoBehaviour {
     public int price;
     public Sprite icon;
     public string name;
-    public ShopList sl ;
+    public ShopList sl;
     private bool added =false;
 
     private GameObject g = null;
     private Item a;
 
-
-    // Update is called once per frame
-    void Start()
-    {
-        a = new Item();
-        a.itemName = name;
-        a.icon = icon;
-        a.price = price;
-        g = GameObject.FindGameObjectWithTag("findme");
-        sl = g.GetComponent<ShopList>();
-    }
    public void addButtons()
     {
 
@@ -40,5 +29,15 @@ public class Items : MonoBehaviour {
         }
         added = true;
     }
-    
+    private void Awake()
+    {
+        Debug.Log("woke");
+        a = new Item();
+        a.itemName = name;
+        a.icon = icon;
+        a.price = price;
+        g = GameObject.FindGameObjectWithTag("findme");
+        sl = g.GetComponent<ShopList>();
+    }
+
 }

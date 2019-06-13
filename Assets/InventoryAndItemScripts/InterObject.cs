@@ -11,16 +11,23 @@ public class InterObject : MonoBehaviour
     public Text t;
     public GameObject textbox;
     public string message;
+    public ObjectPool cropPool;
 
-
-
+    private void Start()
+    {
+        if(inventory)
+        {
+            GameObject x = GameObject.FindGameObjectWithTag("cherryPool");
+            cropPool = x.GetComponent<ObjectPool>();
+        }
+    }
 
     public void DoInter()
     {
         //Make item disappear
         if (inventory)
             {
-            gameObject.SetActive(false);
+            cropPool.ReturnObject(this.gameObject);
             inventory.addButtons();
 
         }  

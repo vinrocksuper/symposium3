@@ -16,7 +16,7 @@ public class farmland : MonoBehaviour
     public bool planted = false;
     public bool range = false;
     private bool fullyGrown = false;
-
+    public ObjectPool cropPool;
     // Update is called once per frame
     void Update()
     {
@@ -40,7 +40,7 @@ public class farmland : MonoBehaviour
                 convertArray();
             
                 bool result = false;
-             for(int i=0;i<inventoryCopy.Length;i++)
+            for(int i=0;i<inventoryCopy.Length;i++)
                 {
                     if (inventoryCopy[i] != null && inventoryCopy[i].Contains("Seed"))
                     {
@@ -108,5 +108,9 @@ public class farmland : MonoBehaviour
     public void OnTriggerExit2D(Collider2D collision)
     {
         range = false;   
+    }
+    private void Start()
+    {
+        cropPool = GameObject.FindGameObjectWithTag("cherryPool").GetComponent<ObjectPool>();
     }
 }
