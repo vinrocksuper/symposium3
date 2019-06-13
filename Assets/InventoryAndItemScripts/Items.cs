@@ -38,5 +38,22 @@ public class Items : MonoBehaviour {
         g = GameObject.FindGameObjectWithTag("findme");
         sl = g.GetComponent<ShopList>();
     }
-
+    private void Start()
+    {
+        a = new Item();
+        a.itemName = name;
+        a.icon = icon;
+        a.price = price;
+        g = GameObject.FindGameObjectWithTag("findme");
+        sl = g.GetComponent<ShopList>();
+    }
+    public void repair()
+    {
+        a = new Item();
+        a.itemName = name;
+        a.icon = icon;
+        a.price = price;
+        g = GameObject.FindGameObjectWithTag("findme");
+        sl = g.GetComponent<ShopList>();
+    }
 }

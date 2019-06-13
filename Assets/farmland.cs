@@ -70,7 +70,9 @@ public class farmland : MonoBehaviour
 
     private void grow()
     {
-        Instantiate(sd.crop, transform.position + (transform.up), transform.rotation);
+        
+        GameObject a = Instantiate(sd.crop, transform.position + (transform.up), transform.rotation);
+        a.GetComponent<Items>().enabled = true;
     }
 
     public void onDayEnd()

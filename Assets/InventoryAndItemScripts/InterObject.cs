@@ -22,7 +22,7 @@ public class InterObject : MonoBehaviour
             {
             this.gameObject.SetActive(false);
             inventory.addButtons();
-
+            gameObject.GetComponent<Items>().repair();
         }  
     }
 
