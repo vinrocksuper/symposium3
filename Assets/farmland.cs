@@ -14,9 +14,9 @@ public class farmland : MonoBehaviour
     public bool watered;
     private bool wither;
     public bool planted = false;
-    public bool range = false;
+    public bool range = true;
     private bool fullyGrown = false;
-
+    public changeSprite cs;
     // Update is called once per frame
     void Update()
     {
@@ -27,7 +27,7 @@ public class farmland : MonoBehaviour
             {
                 //water method here
                 watered = true;
-
+                cs.water();
             }
             else if (wither)
             {
@@ -80,8 +80,9 @@ public class farmland : MonoBehaviour
         if (!watered && planted)
         {
             wither = true;
+            cs.Dry();
         }
-        if (watered)
+        if (watered && planted)
         {
             watered = false;
             this.sd.daysToGrow--;

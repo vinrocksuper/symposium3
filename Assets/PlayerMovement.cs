@@ -17,7 +17,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        var pos = transform.position;
+        if(pos.y < -4)
+        {
+            transform.position = new Vector3(0, 0, 0);
+        }
         
 
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;

@@ -9,6 +9,6 @@ public class not_destroy : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
     }
-
+    
 
 }

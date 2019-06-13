@@ -36,7 +36,11 @@ public class CharacterController2D : MonoBehaviour
     
     private void Awake()
 	{
-		m_Rigidbody2D = GetComponent<Rigidbody2D>();
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+        m_Rigidbody2D = GetComponent<Rigidbody2D>();
         
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
